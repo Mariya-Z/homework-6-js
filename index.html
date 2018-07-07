@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- <script src='js1.js'></script> -->
+  <script src='Character.js'></script>
+  <script src='Hero.js'></script>
+  <script src='Monster.js'></script>
+  <script src='Tourney.js'></script>
+  <script src='Game.js'></script>
+</head>
+<body>
+  <script>
+    var myTourney = tourneyFactory(6);
+
+    console.log(myTourney.addCharacter(muggerFactory('Hero1')));
+    console.log(myTourney.addCharacter(trooperFactory('Hero3')));
+    console.log(myTourney.addCharacter(wizardFactory('Hero4')));
+    console.log(myTourney.addCharacter(goblinFactory('Monster1')));
+    console.log(myTourney.addCharacter(orksFactory('Monster2')));
+    console.log(myTourney.addCharacter(vampierFactory('Monster3')));
+
+    myTourney.play();
+    console.log(myTourney.showWinner());
+  </script>
+</body>
+</html>
